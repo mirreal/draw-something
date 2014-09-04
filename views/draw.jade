@@ -1,0 +1,28 @@
+extends layout
+block body
+  h2 Draw Something
+  canvas(id="canvas", width="640", height="480")
+  div(class="right")
+    filedset
+      label Color:
+      select(id="color")
+        option Brown
+        option(selected="selected") DarkKhaki
+        option Magenta
+        option Cyan
+        option Orange
+      lsbel Size:
+      select(id="size")
+        option 1
+        option 2
+        option 4
+        option(selected="selected") 8
+      input(type="button" id="clear", value="Clear")
+    h4 User Lists
+    ul(id="userLists")
+    filedset
+      input(id="message", type="text")
+      input(id="sendButton", type="button", value="Send")
+    ul(id="messageBox")
+  div(class="cleaner")
+  script(src="js/draw.js")
